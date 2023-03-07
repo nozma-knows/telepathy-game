@@ -23,28 +23,28 @@ export default function Home() {
       >
         <Draggable
           image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png"
-          x={20}
-          y={20}
+          x={(1 * width) / 4}
+          y={height / 2}
         />
         <Draggable
           image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png"
-          x={180}
-          y={20}
+          x={width / 2}
+          y={height / 2}
         />
         <Draggable
           image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png"
-          x={20}
-          y={180}
+          x={(3 * width) / 4}
+          y={height / 2}
         />
         <Draggable
           image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png"
-          x={180}
-          y={180}
+          x={width / 2}
+          y={(1 * height) / 4}
         />
         <Draggable
           image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png"
-          x={100}
-          y={100}
+          x={width / 2}
+          y={(3 * height) / 4}
         />
       </Stage>
     </div>
