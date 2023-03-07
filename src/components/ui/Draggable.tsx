@@ -1,12 +1,11 @@
 import React from "react";
 import { Sprite } from "@inlet/react-pixi";
 import { DisplayObject } from "pixi.js";
-// import { InteractionEvent } from "@pixi/interaction";
+import { InteractionEvent } from "@pixi/interaction";
 import { Viewport as PixiViewport } from "pixi-viewport";
 
 interface PixiDraggable extends DisplayObject {
-  // data: InteractionEvent | null;
-  data: any;
+  data: InteractionEvent | null;
   dragging: boolean;
 }
 
@@ -17,8 +16,11 @@ interface Props {
 }
 
 const Draggable = ({ image, x, y }: Props) => {
-  // const onDragStart = (event: InteractionEvent) => {
-  const onDragStart = (event: any) => {
+  const onDragStart = (event: InteractionEvent) => {
+    console.log("EVENT: ", event);
+    console.log("EVENT.DATA: ", event.data);
+
+    // const onDragStart = (event: any) => {
     const sprite = event.currentTarget as PixiDraggable;
     const viewport = sprite.parent as PixiViewport;
 
@@ -28,8 +30,8 @@ const Draggable = ({ image, x, y }: Props) => {
     viewport.drag({ pressDrag: false });
   };
 
-  // const onDragEnd = (event: InteractionEvent) => {
-  const onDragEnd = (event: any) => {
+  const onDragEnd = (event: InteractionEvent) => {
+    // const onDragEnd = (event: any) => {
     const sprite = event.currentTarget as PixiDraggable;
     const viewport = sprite.parent as PixiViewport;
 
@@ -39,8 +41,8 @@ const Draggable = ({ image, x, y }: Props) => {
     viewport.drag();
   };
 
-  // const onDragMove = (event: InteractionEvent) => {
-  const onDragMove = (event: any) => {
+  const onDragMove = (event: InteractionEvent) => {
+    // const onDragMove = (event: any) => {
     const sprite = event.currentTarget as PixiDraggable;
     console.log("sprite: ", sprite);
     if (sprite.dragging) {
@@ -57,6 +59,7 @@ const Draggable = ({ image, x, y }: Props) => {
       y={y}
       anchor={0.5}
       interactive
+      cursor="pointer"
       buttonMode
       pointerdown={onDragStart}
       pointerup={onDragEnd}
@@ -67,3 +70,15 @@ const Draggable = ({ image, x, y }: Props) => {
 };
 
 export default Draggable;
+
+// import React, { useRef, useState } from "react";
+// import * as PIXI from "pixi.js";
+
+// export default function Draggable() {
+//   const ref = useRef<any>();
+
+//   const app = new PIXI.Application({ background: "#1099bb" });
+//   ref.current.appendChild(app.view);
+
+//   return <div></div>;
+// }

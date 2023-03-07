@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import { Stage } from "@inlet/react-pixi";
-import { Stage } from "@pixi/react";
+import { Stage, Sprite } from "@pixi/react";
 import Draggable from "@/components/ui/Draggable";
 import useWindowSize from "@/components/utils/hooks/useWindowSize";
 
@@ -19,7 +19,10 @@ export default function Home() {
       <Stage
         width={width}
         height={height}
-        options={{ backgroundColor: 0xf2b310, resolution: 2 }}
+        options={{
+          backgroundColor: 0xf2b310,
+          resolution: 2,
+        }}
       >
         <Draggable
           image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png"
