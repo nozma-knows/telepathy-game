@@ -48,6 +48,11 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@inlet/react-pixi@^6.8.0":
+  version "6.8.0"
+  resolved "https://registry.yarnpkg.com/@inlet/react-pixi/-/react-pixi-6.8.0.tgz#6d1f632c61ec814dd0306a61512c24d01e48f2f7"
+  integrity sha512-WIbmChkiM14XswP7pb8aCWR++h2qYKutNkXqYeWoDOQGKJw89278fRVC22zPYOw2SjSNVRtnLMlj4nkCfjTiFg==
+
 "@next/env@13.2.3":
   version "13.2.3"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.2.3.tgz#77ca49edb3c1d7c5263bb8f2ebe686080e98279e"
@@ -242,6 +247,11 @@
   resolved "https://registry.yarnpkg.com/@pixi/graphics/-/graphics-7.1.4.tgz#f636b421338c9c176f2bfa5cc5b4da02bb80269b"
   integrity sha512-1mLvS01o9HffUG09ngp4DZGCz6jFzOpctXKZFosd/2rfVPVQWy/P5csgu8XqRk8ZrxJE6tgUK/asb7RiG+B9cQ==
 
+"@pixi/interaction@^6.5.9":
+  version "6.5.9"
+  resolved "https://registry.yarnpkg.com/@pixi/interaction/-/interaction-6.5.9.tgz#033ddfc8963a18c5384b4d01c032483651c7a27d"
+  integrity sha512-PXWPPpOBwZdf/VtrstYaKqtUfJcJR57oRGdSXZ0mtvN8jEhsWUe0GlmlHEp6PxTwtn5ECKDy8+i9V0CcqLKgug==
+
 "@pixi/math@7.1.4":
   version "7.1.4"
   resolved "https://registry.yarnpkg.com/@pixi/math/-/math-7.1.4.tgz#d085ba416be6075718edeb0cf695fc960c4d6972"
@@ -404,6 +414,13 @@
   version "2019.7.0"
   resolved "https://registry.yarnpkg.com/@types/offscreencanvas/-/offscreencanvas-2019.7.0.tgz#e4a932069db47bb3eabeb0b305502d01586fa90d"
   integrity sha512-PGcyveRIpL1XIqK8eBsmRBt76eFgtzuPiSTyKHZxnGemp2yzGzWpjYKAfK3wIMiU7eH+851yEpiuP8JZerTmWg==
+
+"@types/pixi.js@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@types/pixi.js/-/pixi.js-5.0.0.tgz#3fbd6d9d26cb563a0f2870e0ea767bc62dddf1b8"
+  integrity sha512-yZqQBR043lRBlBZci2cx6hgmX0fvBfYIqFm6VThlnueXEjitxd3coy+BGsqsZ7+ary7O//+ks4aJRhC5MJoHqA==
+  dependencies:
+    pixi.js "*"
 
 "@types/prop-types@*":
   version "15.7.5"
@@ -2047,7 +2064,12 @@ pify@^2.3.0:
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
   integrity sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==
 
-pixi.js@^7.1.4:
+pixi-viewport@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/pixi-viewport/-/pixi-viewport-5.0.0.tgz#7d8b19fdb40c9b2faae32b3972ec6b8184f6d9c0"
+  integrity sha512-Z9UkTUGLh90U6VF1catDAMQIbb52NIe0uKyn50GuZFs0taDEu61qr+voWY1UJ6BZpcavkpzgPdlRwfuOITVQeg==
+
+pixi.js@*, pixi.js@^7.1.4:
   version "7.1.4"
   resolved "https://registry.yarnpkg.com/pixi.js/-/pixi.js-7.1.4.tgz#2cc40d7af2b0656ae46208d59f61487633dd551f"
   integrity sha512-hWV60RLU2yTZc9uzO39WKnCWQKkNqwJkbamXd9IcgBvzOJ5pqIrmQ7xVUI+Nx76IJGXFUtkbzMObaYwzK3V7lw==

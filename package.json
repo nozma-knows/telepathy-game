@@ -9,13 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@inlet/react-pixi": "^6.8.0",
+    "@pixi/interaction": "^6.5.9",
     "@pixi/react": "^7.0.2",
     "@types/node": "18.14.6",
+    "@types/pixi.js": "^5.0.0",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "next": "13.2.3",
+    "pixi-viewport": "^5.0.0",
     "pixi.js": "^7.1.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
