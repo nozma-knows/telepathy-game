@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-// import { Stage } from "@inlet/react-pixi";
-import { Stage, Sprite } from "@pixi/react";
-import Draggable from "@/components/ui/Draggable";
 import useWindowSize from "@/components/utils/hooks/useWindowSize";
+import Game from "@/components/ui/Game";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+
+const title = `Telepathy Game`;
 
 export default function Home() {
   const size = useWindowSize();
@@ -15,41 +17,13 @@ export default function Home() {
   }, [size]);
 
   return (
-    <div>
-      <Stage
-        width={width}
-        height={height}
-        options={{
-          backgroundColor: 0xf2b310,
-          resolution: 2,
-        }}
-      >
-        <Draggable
-          image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png"
-          x={(1 * width) / 4}
-          y={height / 2}
-        />
-        <Draggable
-          image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png"
-          x={width / 2}
-          y={height / 2}
-        />
-        <Draggable
-          image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png"
-          x={(3 * width) / 4}
-          y={height / 2}
-        />
-        <Draggable
-          image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png"
-          x={width / 2}
-          y={(1 * height) / 4}
-        />
-        <Draggable
-          image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png"
-          x={width / 2}
-          y={(3 * height) / 4}
-        />
-      </Stage>
+    <div style={{ width, height }} className="flex flex-col">
+      <div className="flex w-full justify-center">
+        <div className="text-4xl font-bold">{title}</div>
+      </div>
+      <DndProvider backend={HTML5Backend}>
+        <Game />
+      </DndProvider>
     </div>
   );
 }
