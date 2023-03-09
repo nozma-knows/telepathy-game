@@ -1,11 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## This is a simple game for using the [Nerosity](https://neurosity.co/) crown to train your focus
 
-## Getting Started
+### Getting Started
 
-First, run the development server:
+After cloning the repository and opening in your favorite IDE run, the following command in the terminal to start the application
 
 ```bash
-yarn dev
+yarn && yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
